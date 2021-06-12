@@ -63,7 +63,7 @@ public class InputController : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Gizmos.color = Color.yellow;
+        Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, PlayerStats.Instance.ViewDistance);
     }
 
