@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: test color
+  m_Name: for obstacles
   m_Shader: {fileID: 4800000, guid: 94d6438e6b1726b45a8c17061bb3cb7f, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -40,7 +40,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 8ff78d3f68391c1499240df3aaf9ba9e, type: 3}
+        m_Texture: {fileID: 2800000, guid: d6219d4d36c02cf4796eba73f0539de9, type: 3}
         m_Scale: {x: 6, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -81,8 +81,8 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _SplatColor1: {r: 0.8490566, g: 0.067238376, b: 0.03604484, a: 1}
-    - _SplatColor2: {r: 0.8490566, g: 0.067238376, b: 0.03604484, a: 1}
+    - _SplatColor1: {r: 0.043330286, g: 0.8207547, b: 0.0038714937, a: 1}
+    - _SplatColor2: {r: 0.8509804, g: 0.035294104, b: 0.7575858, a: 1}
     - _SplatColor3: {r: 0, g: 1, b: 0, a: 1}
     - _SplatColor4: {r: 0, g: 0, b: 1, a: 1}
   m_BuildTextureStacks: []

@@ -81,8 +81,8 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _SplatColor1: {r: 0.8490566, g: 0.067238376, b: 0.03604484, a: 1}
-    - _SplatColor2: {r: 0.8490566, g: 0.067238376, b: 0.03604484, a: 1}
+    - _SplatColor1: {r: 0.043330286, g: 0.8207547, b: 0.0038714937, a: 1}
+    - _SplatColor2: {r: 0.8509804, g: 0.035294104, b: 0.7575858, a: 1}
     - _SplatColor3: {r: 0, g: 1, b: 0, a: 1}
     - _SplatColor4: {r: 0, g: 0, b: 1, a: 1}
   m_BuildTextureStacks: []
