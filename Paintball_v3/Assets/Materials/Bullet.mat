@@ -8,8 +8,8 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Bullet
-  m_Shader: {fileID: 4800000, guid: ccfc7d68845db8341944b3091b59be55, type: 3}
-  m_ShaderKeywords: 
+  m_Shader: {fileID: 4800000, guid: 24a666c4cf4f5194ba2cdff51c1dc2f0, type: 3}
+  m_ShaderKeywords: OUTLINE_BLENDING
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -64,23 +64,31 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
+    - _DstBlendOutline: 10
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
+    - _Offset1: 0
+    - _Offset2: 0
+    - _Outline: 7
     - _Parallax: 0.02
-    - _RampSmooth: 0.1
-    - _RampThreshold: 0.5
+    - _RampSmooth: 0.252
+    - _RampThreshold: 0.466
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
+    - _SrcBlendOutline: 5
+    - _TexLod: 5
     - _UVSec: 0
+    - _ZSmooth: -0.5
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.043330286, g: 0.8207547, b: 0.0038714937, a: 1}
+    - _Color: {r: 0.5142301, g: 0.84300005, b: 0.5212252, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _HColor: {r: 0.043137256, g: 0.81960785, b: 0.003921569, a: 1}
+    - _HColor: {r: 0.4481132, g: 1, b: 0.46125332, a: 1}
+    - _OutlineColor: {r: 0.29520434, g: 1, b: 0.23113209, a: 1}
     - _SColor: {r: 0.195, g: 0.195, b: 0.195, a: 1}
   m_BuildTextureStacks: []

@@ -8,6 +8,7 @@ public class Restart : MonoBehaviour
     public void RestartLVL()
     {
         PaintTarget.ClearAllPaint();
-        SceneManager.LoadScene(0);
+        int sceneID = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(sceneID);
     }
 }

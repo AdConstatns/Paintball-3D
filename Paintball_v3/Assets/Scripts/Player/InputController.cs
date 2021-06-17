@@ -61,11 +61,11 @@ public class InputController : MonoBehaviour
         if (Target != null) Debug.DrawLine(transform.position, Target.position, Color.red);
     }
 
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, PlayerStats.Instance.ViewDistance);
-    }
+    //private void OnDrawGizmos()
+    //{
+    //    Gizmos.color = Color.yellow;
+    //    Gizmos.DrawWireSphere(transform.position, PlayerStats.Instance.ViewDistance);
+    //}
 
 
 }

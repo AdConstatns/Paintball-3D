@@ -10,6 +10,8 @@ TagManager:
   - Missile
   - Walls
   - Shelter
+  - join
+  - Friend
   layers:
   - Default
   - TransparentFX

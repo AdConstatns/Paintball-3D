@@ -12,6 +12,7 @@ public class BotRagdoll : MonoBehaviour
     [SerializeField] private Transform _avatar;
 
 
+
     private void Awake()
     {
         _animator = GetComponentInChildren<Animator>();
@@ -47,5 +48,6 @@ public class BotRagdoll : MonoBehaviour
         SwitchRagdoll(false);
         _avatar.SetParent(null);
         gameObject.SetActive(false);
+        BotCounter.Instance.botCount -= 1;
     }
 }

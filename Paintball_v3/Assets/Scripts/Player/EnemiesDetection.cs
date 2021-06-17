@@ -26,22 +26,40 @@ public class EnemiesDetection : MonoBehaviour
     }
 
 
+    //public bool FindTargets(out Transform targetTransform)
+    //{
+    //    for (int i = 0; i < _enemiesTransforms.Length; i++)
+    //    {
+    //        RaycastHit hit;
+    //        if (Physics.Raycast(transform.position, _enemiesTransforms[i].position - transform.position, out hit, PlayerStats.Instance.ViewDistance) && hit.transform == _enemiesTransforms[i])
+    //        {
+    //                targetTransform = _enemiesTransforms[i];
+    //                return true;    
+    //        }
+    //    }
+    //    targetTransform = null;
+    //    return false;
+    //}
+
     public bool FindTargets(out Transform targetTransform)
     {
+        var minDistance = float.MaxValue;
+        targetTransform = null;
+
         for (int i = 0; i < _enemiesTransforms.Length; i++)
         {
             RaycastHit hit;
-            if (Physics.Raycast(transform.position, _enemiesTransforms[i].position - transform.position, out hit, PlayerStats.Instance.ViewDistance))
+            if (Physics.Raycast(transform.position, _enemiesTransforms[i].position - transform.position, out hit, PlayerStats.Instance.ViewDistance) && hit.transform == _enemiesTransforms[i])
             {
-                if (Vector3.Distance(transform.position, _enemiesTransforms[i].position) <= PlayerStats.Instance.ViewDistance && hit.transform == _enemiesTransforms[i])
+                var candidateTransform = _enemiesTransforms[i];
+                var sqrDistance = (candidateTransform.position - transform.position).sqrMagnitude;
+                if (sqrDistance < minDistance)
                 {
-                    targetTransform = _enemiesTransforms[i];
-                    return true;
+                    minDistance = sqrDistance;
+                    targetTransform = candidateTransform;
                 }
             }
         }
-        targetTransform = null;
-        return false;
+        return targetTransform != null;
     }
-
 }
