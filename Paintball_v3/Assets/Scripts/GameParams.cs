@@ -7,6 +7,7 @@ public class GameParams : MonoBehaviour
     public static GameParams Instance;
 
     public float botHealth = 20f;
+    public float bossHealth = 40f;
     public float playerWeaponDamage = 1f;
     public float playerHealth = 20f;
     public float botWeaponDamage = 1f;

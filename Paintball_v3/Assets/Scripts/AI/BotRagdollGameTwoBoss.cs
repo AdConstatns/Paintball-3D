@@ -1,30 +1,35 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
-public class PlayerRagdollController : MonoBehaviour
+public class BotRagdollGameTwoBoss : MonoBehaviour
 {
     [SerializeField] private Rigidbody[] allRigidbodies;
     private Animator _animator;
-    private float _health;
+    public float _health;
+    private NavMeshAgent _agent;
     [SerializeField] private Transform _avatar;
-    [SerializeField] private Rigidbody _hip;
-    [SerializeField] private GunTestGameThree gunTest;
-    [SerializeField] private GameObject fillBar;
+    private BotEnemyDetectionGameTwo BotEnemyDetectionGameTwo;
+    private AiSystemGameTwo aiSystemGameTwo;
 
 
 
-    private Vector3 bulletVelocity;
+
 
     private void Awake()
     {
         _animator = GetComponentInChildren<Animator>();
+        _agent = GetComponent<NavMeshAgent>();
         SwitchRagdoll(true);
+        aiSystemGameTwo = GetComponent<AiSystemGameTwo>();
     }
 
     private void Start()
     {
-        _health = GameParams.Instance.playerHealth;
+        _health = GameParams.Instance.bossHealth;
+        BotEnemyDetectionGameTwo = GetComponent<BotEnemyDetectionGameTwo>();
+        gameObject.SetActive(false);
     }
 
     private void SwitchRagdoll(bool state)
@@ -40,8 +45,7 @@ public class PlayerRagdollController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Bullet"))
         {
-            bulletVelocity = collision.gameObject.GetComponent<Rigidbody>().velocity;
-            _health -= GameParams.Instance.botWeaponDamage;
+            _health -= GameParams.Instance.playerWeaponDamage;
             if (_health <= 0) Death();
         }
     }
@@ -49,12 +53,9 @@ public class PlayerRagdollController : MonoBehaviour
     private void Death()
     {
         SwitchRagdoll(false);
-        _hip.AddForce(bulletVelocity * 20f, ForceMode.Impulse);
         _avatar.SetParent(null);
-        gameObject.SetActive(false);
-        gunTest.enabled = false;
-
-
+       gameObject.SetActive(false);
+     
     }
 
 }

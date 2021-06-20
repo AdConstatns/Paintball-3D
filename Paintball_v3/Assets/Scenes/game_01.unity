@@ -5826,6 +5826,9 @@ MonoBehaviour:
   - {fileID: 862473322}
   - {fileID: 1834218664}
   _avatar: {fileID: 543450652067221895}
+  _hip: {fileID: 0}
+  gunTest: {fileID: 0}
+  fillBar: {fileID: 0}
 --- !u!114 &562992159
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6125,7 +6128,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 3.331e-42, y: 1.2384837e+19, z: 4.5905e-41, w: 0}
+  m_BoundingSphereOverride: {x: 1.7753206e+28, y: -5.977344e+37, z: 4.5904e-41, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -10007,8 +10010,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   botHealth: 20
+  bossHealth: 40
   playerWeaponDamage: 1
-  playerHealth: 20
+  playerHealth: 30
   botWeaponDamage: 1
   bulletSpeed: 100
 --- !u!4 &1311579680
@@ -13871,7 +13875,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.19320267, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.7467409, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -13948,7 +13952,7 @@ MeshRenderer:
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 0.1
+  m_ScaleInLightmap: 0.4
   m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
